@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const svgToMiniDataURI = require('mini-svg-data-uri');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 // production and dev
 const isDev = process.env.NODE_ENV === "development"
@@ -55,6 +55,7 @@ const plugins = () => {
     new MiniCssExtractPlugin({
       filename: `./styles/${filename("css")}`
     }),
+    new SpriteLoaderPlugin(),
     // new CopyPlugin({
     //   patterns: [
     //     {
@@ -135,14 +136,22 @@ module.exports = {
           }
         ]
       },
+      // {
+      //   test: /\.svg$/,
+      //   loader: 'svg-sprite-loader',
+      //   options: {
+      //     extract: true,
+      //   }
+      // },
       {
-        test: /\.(png|svg|jpe?g|gif)$/i,
-        type: 'asset/resource',
+        test: /\.(png|svg|jpe?g|gif|mp4)$/i,
+        type: 'asset/resource'
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        test: /\.(woff(2)?|eot|ttf|otf|)$/i,
+        type: 'asset/resource'
       },
+
     ],
   },
   optimization: optimization()
