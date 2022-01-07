@@ -1,15 +1,19 @@
+
+
 const path = require('path');
 const webpack = require("webpack")
 
 // плагины
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const CopyPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+// const UglifyJsPlugin = require('uglify-js');
 
 // production and dev
 const isDev = process.env.NODE_ENV === "development"
@@ -20,18 +24,44 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}
 const optimization = () => {
   const configObf = {
     splitChunks: {
-      chunks: "all"
-    }
+      chunks: "all",
+    },
   }
   if (isProd) {
     configObf.minimizer = [
-      new CssMinimizerPlugin(),
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          level: {
+            1: {
+              roundingPrecision: "all=3,px=5",
+            },
+          },
+        },
+        minify: CssMinimizerPlugin.cleanCssMinify,
+      }),
       new TerserPlugin(),
+      new HtmlMinimizerPlugin({
+        minimizerOptions: {
+          collapseWhitespace: true,
+        },
+        minify: [
+          HtmlMinimizerPlugin.htmlMinifierTerser
+        ]
+      }),
       new ImageMinimizerPlugin({
         minimizer: {
           implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+            plugins: [
+              "imagemin-gifsicle",
+              "imagemin-mozjpeg",
+              "imagemin-pngquant",
+              "imagemin-svgo",
+            ],
+          }
         },
       }),
+
     ]
   }
 
