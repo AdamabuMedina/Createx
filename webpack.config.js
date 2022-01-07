@@ -13,19 +13,19 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-// const UglifyJsPlugin = require('uglify-js');
 
 // production and dev
 const isDev = process.env.NODE_ENV === "development"
 const isProd = !isDev
 
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
+const filename = (ext) => isDev ? `[name].${ext}` : `[contenthash].${ext}`
 
 const optimization = () => {
   const configObf = {
     splitChunks: {
       chunks: "all",
     },
+    mangleExports: "size",
   }
   if (isProd) {
     configObf.minimizer = [
@@ -166,16 +166,23 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.svg$/,
-      //   loader: 'svg-sprite-loader',
-      //   options: {
-      //     extract: true,
-      //   }
-      // },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        options: {
+          extract: true,
+          spriteFilename: svgPath => `sprite${svgPath.substr(-4)}`
+        },
+        include: [
+          path.resolve(__dirname, './src/img/svg'),
+        ]
+      },
       {
         test: /\.(png|svg|jpe?g|gif|mp4)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        exclude: [
+          path.resolve(__dirname, './src/img/svg'),
+        ]
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|)$/i,
