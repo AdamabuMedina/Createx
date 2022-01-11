@@ -1,6 +1,0 @@
-import "../img/svg/play.svg"
-import "../img/svg/mute.svg"
-import "../img/svg/construction.svg"
-import "../img/svg/project.svg"
-import "../img/svg/design.svg"
-import "../img/svg/repairs.svg"

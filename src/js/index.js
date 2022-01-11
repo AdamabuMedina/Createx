@@ -1,2 +1,8 @@
+
+// Scripts
+import "./vendor/vendor"
+import "./components/sliders"
+
+// CSS
 import "../styles/main.scss"
-import "./svg"
+import "./components/svg"
