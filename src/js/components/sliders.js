@@ -4,6 +4,8 @@ const bodyStyles = window.getComputedStyle(document.body)
 const gap = parseInt(bodyStyles.getPropertyValue("--grid-gap"))
 
 const portSlider = document.querySelector(".portfolio-section__items")
+const testSlider = document.querySelector(".testimonials__items")
+
 
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
@@ -57,3 +59,15 @@ if (portSlider) {
     nextNextActiveSlide.classList.add('slider-visible');
   });
 }
+
+
+const testimonialsSlider = new Swiper(testSlider, {
+
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  }
+});
