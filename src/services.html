@@ -9,10 +9,12 @@
   </head>
   <body>
     <!-- Header -->
-    <%= require('html-loader!./partials/header.html').default %>
+    <%= require('html-loader!./partials/header-1.html').default %>
     <main>
       <!--Contacts-section-->
       <%=
+      require('html-loader!./partials/services-page/01_hero-services.html').default
+      %> <%=
       require('html-loader!./partials/homepage/11_contacts-section.html').default
       %>
     </main>
