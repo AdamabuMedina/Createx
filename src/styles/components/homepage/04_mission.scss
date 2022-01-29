@@ -25,7 +25,7 @@
         top: 0;
         width: 1px;
         height: 100%;
-        background-image: url('../img/mission/divider.svg');
+        background-image: url('../img/homepage/mission/divider.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -33,15 +33,15 @@
     }
 
     &--quality {
-      background-image: url('../img/mission/quality.svg');
+      background-image: url('../img/homepage/mission/quality.svg');
     }
 
     &--safety {
-      background-image: url('../img/mission/safety.svg');
+      background-image: url('../img/homepage/mission/safety.svg');
     }
 
     &--comfort {
-      background-image: url('../img/mission/comfort.svg');
+      background-image: url('../img/homepage/mission/comfort.svg');
     }
   }
   &__subtitle {

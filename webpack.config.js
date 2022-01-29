@@ -77,9 +77,10 @@ const plugins = () => {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),
       // favicon: path.resolve(__dirname, "src/assets/favicon.ico"),
-      minify: {
-        collapseWhitespace: isProd
-      }
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'services.html',
+      template: path.resolve(__dirname, "src/services.html"),
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -122,8 +123,11 @@ module.exports = {
   module: {
     rules: [
       // {
-      //   test: /\.html$/i,
+      //   test: /\.html$/,
       //   loader: "html-loader",
+      //   options: {
+      //     interpolate: true
+      //   }
       // },
       {
         test: /\.m?js$/,

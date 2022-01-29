@@ -1,7 +1,7 @@
 .services-section {
   padding-top: 212px;
   padding-bottom: 80px;
-  background-image: url('../img/services/services-bg.jpg');
+  background-image: url('../img/homepage/services/services-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,25 +89,25 @@
 
   &--construct {
     &::before {
-      background-image: url('../img/services/services-1.jpg');
+      background-image: url('../img/homepage/services/services-1.jpg');
     }
   }
 
   &--project {
     &::before {
-      background-image: url('../img/services/services-1.jpg');
+      background-image: url('../img/homepage/services/services-1.jpg');
     }
   }
 
   &--design {
     &::before {
-      background-image: url('../img/services/services-1.jpg');
+      background-image: url('../img/homepage/services/services-1.jpg');
     }
   }
 
   &--repairs {
     &::before {
-      background-image: url('../img/services/services-1.jpg');
+      background-image: url('../img/homepage/services/services-1.jpg');
     }
   }
 
