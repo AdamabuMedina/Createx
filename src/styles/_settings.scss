@@ -22,18 +22,7 @@ a {
   text-decoration: none;
 }
 
-.btn-reser {
-  border: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
 
-.list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .container {
   margin: 0 auto;
@@ -190,15 +179,28 @@ a {
     transition: opacity 0.3s ease-in-out;
   }
 
-  &__input:checked + &__text::before {
+  &__input:checked+&__text::before {
     background-color: var(--color-primary);
   }
 
-  &__input:checked + &__text::after {
+  &__input:checked+&__text::after {
     opacity: 1;
   }
 
-  &__input:focus + &__text {
+  &__input:focus+&__text {
     outline: 3px solid var(--color-primary);
   }
+}
+
+.btn-reser {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
