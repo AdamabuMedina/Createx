@@ -1,5 +1,6 @@
 .form-field {
   @include flex-column-start;
+
   &__caption {
     margin-bottom: 7px;
     font-size: 14px;
@@ -17,7 +18,7 @@
     line-height: 150%;
 
     &::placeholder {
-      color: #9a9ca5;
+      color: var(--color-manatee);
     }
 
     &--big {
