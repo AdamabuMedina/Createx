@@ -94,6 +94,10 @@ const plugins = () => {
       filename: 'work-inner.html',
       template: path.resolve(__dirname, "src/work-inner.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: path.resolve(__dirname, "src/about.html"),
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./styles/${filename("css")}`
