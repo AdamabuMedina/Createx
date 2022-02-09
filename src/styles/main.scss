@@ -11,14 +11,6 @@
 
 // подключения компонентов страницы (большие компоненты)
 @import './components/header.scss';
-@import './components/components';
+@import './components/components-big';
+@import './components/components-small';
 @import './components/footer';
-
-// подключения компонентов страницы (маленькие компоненты)
-@import './components/nav';
-@import './components/header-contacts';
-@import './components/video-block';
-@import './components/learn-more';
-@import './components/social';
-@import './components/breadcrumbs';
-@import './components/portfolio-item';

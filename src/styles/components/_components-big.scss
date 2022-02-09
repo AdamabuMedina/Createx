@@ -21,7 +21,9 @@
 @import './services-inner/related-projects';
 @import './services-inner/pricing';
 
-//work
-// @import './work/hero-work';
+// work
 @import "./work/portfolio";
 @import "./work/clients";
+
+// work-inner
+@import "./work-inner/hero-work-inner";
