@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="# 111111" />
+    <title>Createx</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <%= require('html-loader!./partials/header-1.html').default %>
+    <main>
+      <!--Hero-news-->
+      <%= require('html-loader!./partials/news/hero-news.html').default %>
+      <!--categories-->
+      <%= require('html-loader!./partials/news/categories.html').default %>
+      <!--Contacts-section-->
+      <%=
+      require('html-loader!./partials/homepage/11_contacts-section.html').default
+      %>
+    </main>
+    <!--Footer-->
+    <%= require('html-loader!./partials/footer.html').default %>
+  </body>
+</html>
