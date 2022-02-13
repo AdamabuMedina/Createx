@@ -106,6 +106,10 @@ const plugins = () => {
       filename: 'news.html',
       template: path.resolve(__dirname, "src/news.html"),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'post.html',
+      template: path.resolve(__dirname, "src/post.html"),
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./styles/${filename("css")}`
