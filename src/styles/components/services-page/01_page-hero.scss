@@ -129,4 +129,9 @@
       letter-spacing: 1px;
     }
   }
+
+  &--contacts {
+    background-image: url('../img/contacts/contacts-hero-bg.png');
+    background-position: right -9px bottom;
+  }
 }

@@ -106,17 +106,17 @@ a {
     background-color: var(--color-primary);
 
     // &:focus {
-  //   outline: 2px solid var(--color-primary);
-  //   outline-offset: 2px;
-  // }
+    //   outline: 2px solid var(--color-primary);
+    //   outline-offset: 2px;
+    // }
 
-  // &:hover {
-  //   background-color: var(--color-active);
-  // }
+    // &:hover {
+    //   background-color: var(--color-active);
+    // }
 
-  // &:active {
-  //   background-color: var(--color-active);
-  // }
+    // &:active {
+    //   background-color: var(--color-active);
+    // }
   }
 
   &--stroke {
@@ -131,19 +131,19 @@ a {
     }
 
     // &:focus {
-  //   outline: 2px solid var(--color-primary);
-  //   outline-offset: 2px;
-  // }
+    //   outline: 2px solid var(--color-primary);
+    //   outline-offset: 2px;
+    // }
 
-  // &:hover {
-  //   border-color: var(--color-primary);
-  //   background-color: var(--color-primary);
-  // }
+    // &:hover {
+    //   border-color: var(--color-primary);
+    //   background-color: var(--color-primary);
+    // }
 
-  // &:active {
-  //   border-color: var(--color-primary);
-  //   background-color: var(--color-active);
-  // }
+    // &:active {
+    //   border-color: var(--color-primary);
+    //   background-color: var(--color-active);
+    // }
   }
 }
 
@@ -221,6 +221,62 @@ a {
 
   &__input:checked+&__text::before {
     background-color: var(--color-primary);
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus+&__text {
+    outline: 3px solid var(--color-primary);
+  }
+}
+
+.custom-radio {
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    padding-left: 27px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-gray);
+  }
+
+  &__text::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    display: inline-block;
+    border: 1px solid #b3b7bc;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__text::after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/check-circle.svg');
+    background-position: center;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__input:checked+&__text::before {
+    border-color: var(--color-primary);
   }
 
   &__input:checked+&__text::after {
