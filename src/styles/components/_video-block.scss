@@ -28,10 +28,25 @@
     height: 80px;
     background-color: var(--color-primary);
     transform: translate(-50%, -50%);
+    transition: background-color .3s ease-in-out;
 
     svg {
       width: 26px;
       height: 26px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      background-color: var(--color-active);
+
     }
   }
 
@@ -47,10 +62,26 @@
     width: 40px;
     height: 40px;
     background-color: rgba(#fff, 0.12);
+    transition: background-color .3s ease-in-out;
+
 
     svg {
       width: 20px;
       height: 20px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: rgba(#fff, 0.4);
+    }
+
+    &:active {
+      background-color: rgba(#fff, 0.4);
+
     }
   }
 

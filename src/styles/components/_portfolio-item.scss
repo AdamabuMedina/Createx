@@ -5,6 +5,7 @@
   overflow: hidden;
   box-shadow: var(--main-shadow);
   background: var(--color-light);
+  transition: transform 0.3s ease-in-out;
 
   &__content {
     @include flex-column-center;
@@ -40,5 +41,14 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--color-primary);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
   }
 }

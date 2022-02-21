@@ -37,7 +37,6 @@
       .portfolio-tabs-nav__text {
         color: var(--color-light);
       }
-
     }
   }
 
@@ -96,5 +95,31 @@
     color: inherit;
     fill: currentColor;
     object-fit: cover;
+  }
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--color-ebony);
+  }
+
+  &:active {
+    color: var(--color-active);
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
+    }
   }
 }

@@ -30,6 +30,19 @@
     color: var(--color-manatee);
     transition: color .3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       border-color: currentColor;
       color: var(--color-primary);
@@ -63,10 +76,6 @@
     color: var(--color-gray);
     transition: color .3s ease-in-out;
 
-    &--active {
-      color: var(--color-primary);
-    }
-
     svg {
       display: block;
       width: 24px;
@@ -74,6 +83,23 @@
       color: inherit;
       fill: currentColor;
       object-fit: cover;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
+    &--active {
+      color: var(--color-primary);
     }
   }
 
