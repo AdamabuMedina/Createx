@@ -6,6 +6,7 @@ const gap = parseInt(bodyStyles.getPropertyValue("--grid-gap"))
 const portSlider = document.querySelector(".portfolio-section__items")
 const relatedSlider = document.querySelector(".related-projects__items")
 const testSlider = document.querySelector(".testimonials__items")
+const heroSliders = document.querySelector(".hero-silder")
 
 
 if (portSlider) {
@@ -193,3 +194,36 @@ if (historySlider) {
     })
   })
 }
+
+
+const heroSliderSpeed = 1500
+const fooBar = bodyStyles.getPropertyValue('--hero-slider-speed'); //get
+
+document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + "ms");//set
+
+const heroSlider = new Swiper(heroSliders, {
+
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.hero__next',
+    prevEl: '.hero__prev',
+  },
+  speed: heroSliderSpeed,
+  autoplay: {
+    delay: 1000,
+  },
+  pagination: {
+    el: '.hero__pag',
+    type: 'bullets',
+    clickable: true,
+  },
+  on: {
+    init: function () {
+      const paginationBullets = heroSliders.querySelectorAll(".hero__pag .swiper-pagination-bullet")
+
+      paginationBullets.forEach(el => {
+        el.innerHTML = `<span class="hero__bar"></span>`
+      })
+    }
+  },
+});
