@@ -6,6 +6,7 @@ import "./components/progress"
 import "./components/accordions"
 import "./components/portfolio-tabs"
 import "./components/selects"
+import "./components/video"
 
 // CSS
 import "../styles/main.scss"
