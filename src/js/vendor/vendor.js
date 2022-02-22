@@ -1,3 +1,3 @@
 import "./swiper.min"
 import "./graph-accordion"
-import "./choices.min"
+import "./smooth-scroll.min"

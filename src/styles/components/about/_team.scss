@@ -3,17 +3,41 @@
   padding-bottom: 120px;
 
   &__list {
-    margin-bottom: 20px;
     column-gap: var(--grid-gap);
-    row-gap: 0;
+    margin-bottom: 80px;
+    row-gap: 64px;
   }
 
   &__item {
     grid-column: 3 span;
+
+    &:hover {
+      .team__socials {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
-  &__image {
+  &__top {
+    position: relative;
     margin-bottom: 12px;
+    font-size: 0;
+  }
+
+  &__socials {
+    @include flex-all-center;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0px 0px 4px 4px;
+    padding: 20px 10px;
+    width: 100%;
+    background-color: rgba($color: #ff5a30, $alpha: .7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
   }
 
   &__link {
@@ -27,6 +51,10 @@
       height: 100%;
       fill: var(--color-light);
       object-fit: cover;
+    }
+
+    &:not(:last-child) {
+      margin-right: 12px;
     }
   }
 
@@ -69,7 +97,6 @@
       &:active {
         color: var(--color-active);
       }
-
     }
   }
 }

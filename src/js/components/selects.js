@@ -1,3 +1,5 @@
+import "../vendor/choices.min"
+
 const selects = document.querySelectorAll('.form-field__select');
 selects.forEach(el => {
   new Choices(el, {
@@ -6,4 +8,3 @@ selects.forEach(el => {
     searchEnabled: false,
   })
 })
-// const choices = new Choices(element);
