@@ -1,18 +1,3 @@
-// const cirlce = document.querySelector(".progress")
-
-// const progressAtimation = () => {
-//   let percentageProgress = Math.floor(98)
-
-//   let radius = cirlce.getAttribute("r")
-//   let circleLenght = 2 * Math.PI * radius
-//   cirlce.setAttribute("stroke-dasharray", circleLenght)
-//   cirlce.setAttribute("stroke-dashoffset", circleLenght - circleLenght * percentageProgress / 100)
-// }
-
-// progressAtimation()
-
-
-
 const progressAtimation = () => {
   const cirlces = document.querySelectorAll(".facts-element__cirle")
   cirlces.forEach(el => {

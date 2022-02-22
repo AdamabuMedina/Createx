@@ -10,6 +10,10 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include middledesk {
+      display: none;
+    }
   }
 
   &__prev {
@@ -19,12 +23,11 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
-  }
 
-  // .swiper-horizontal>.swiper-pagination-bullets,
-  // .swiper-pagination-bullets.swiper-pagination-horizontal,
-  // .swiper-pagination-custom,
-  // .swiper-pagination-fraction {}
+    @include middledesk {
+      display: none;
+    }
+  }
 
   &__pag {
     counter-reset: pag;

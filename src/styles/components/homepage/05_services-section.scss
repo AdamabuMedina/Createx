@@ -89,6 +89,10 @@
     line-height: 150%;
     color: var(--color-ebony);
     transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &--construct {

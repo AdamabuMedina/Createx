@@ -28,7 +28,12 @@
     line-height: 150%;
     color: var(--color-ebony);
     transition: color .3s ease-in-out;
+
+    @include minidesk {
+      font-size: 16px;
+    }
   }
+
 
   &:focus {
     outline: 2px solid var(--color-primary);

@@ -16,6 +16,10 @@
     position: relative;
     margin-bottom: -60px;
     z-index: 5;
+
+    @include minidesk {
+      width: 380px;
+    }
   }
 
   &__title {
