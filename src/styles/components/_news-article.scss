@@ -9,6 +9,13 @@
     padding: 20px 24px;
   }
 
+  &__image {
+    @include tablet {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 13px;

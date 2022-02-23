@@ -12,10 +12,12 @@
 }
 
 .services-list {
-  gap: var(--grid-gap);
-
   &__item {
     grid-column: 3 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
   }
 }
 

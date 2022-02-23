@@ -1,6 +1,5 @@
 .testimonials {
   padding-top: 97px;
-  margin-bottom: -30px;
   background-color: var(--color-athens);
 
   &__container {
@@ -10,15 +9,29 @@
 
   &__content {
     max-width: 612px;
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__image {
     position: relative;
-    margin-bottom: -60px;
     z-index: 5;
+    margin-bottom: -60px;
 
     @include minidesk {
       width: 380px;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: 300px;
     }
   }
 

@@ -59,6 +59,14 @@
         display: none;
       }
     }
+
+    @include middledesk {
+      left: 3% !important;
+    }
+
+    @include minidesk {
+      left: 15px !important;
+    }
   }
 
   &__bar {
