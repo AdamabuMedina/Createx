@@ -54,6 +54,11 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__meta {
@@ -87,6 +92,14 @@
 
     .article-meta__item:not(:last-child) {
       margin-right: 25px;
+
+      @include mobile {
+        margin-right: 22px;
+      }
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -137,6 +150,24 @@
       line-height: 120%;
       text-transform: initial;
       letter-spacing: 1px;
+
+      @include minitablet {
+        font-size: 45px;
+        line-height: 58px;
+      }
+
+      @include mobile {
+        font-size: 35px;
+        line-height: 48px;
+      }
+    }
+
+    @include minidesk {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      padding-top: 100px;
     }
   }
 
@@ -152,6 +183,6 @@
 
   @include minitablet {
     padding-top: 80px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 }

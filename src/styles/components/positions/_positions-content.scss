@@ -13,6 +13,10 @@
     justify-content: flex-end;
     grid-column: 5 span;
   }
+
+  @include minitablet {
+    padding: 40px 0;
+  }
 }
 
 .positions-list {
@@ -66,6 +70,12 @@
     background-repeat: no-repeat;
   }
 
+  &__left {
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+
   &__title {
     margin: 0;
     font-weight: 700;
@@ -94,6 +104,11 @@
       color: var(--color-active);
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .positions-looking {
@@ -114,6 +129,18 @@
     font-size: 18px;
     line-height: 150%;
     color: var(--color-gray);
+  }
+
+  &__btns {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      .positions-looking__btn--subs {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__btn {

@@ -73,6 +73,10 @@
     line-height: 160%;
     color: var(--color-storm);
   }
+
+  @include minitablet {
+    padding-bottom: 40px;
+  }
 }
 
 

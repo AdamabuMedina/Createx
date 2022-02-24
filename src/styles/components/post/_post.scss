@@ -75,6 +75,11 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include mobile {
+        padding: 0;
+        padding-top: 50px;
+      }
     }
 
     ul {
@@ -108,6 +113,10 @@
         }
       }
     }
+
+    @include mobile {
+      padding-bottom: 40px;
+    }
   }
 
   &__share {
@@ -127,5 +136,4 @@
       opacity: 1;
     }
   }
-
 }

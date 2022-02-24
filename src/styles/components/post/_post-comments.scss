@@ -6,12 +6,13 @@
     margin-bottom: 60px;
   }
 
-  &__list {}
-
   &__item {
     &:not(:last-child) {
       margin-bottom: 59px;
     }
   }
 
+  @include mobile {
+    padding-bottom: 40px;
+  }
 }
