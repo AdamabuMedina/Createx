@@ -14,8 +14,8 @@ body {
   font-weight: 40;
 
   @include middledesk {
-  overflow-x: hidden;
-}
+    overflow-x: hidden;
+  }
 }
 
 img {
@@ -583,4 +583,48 @@ a {
 
 .burger:focus::after {
   opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: rgba($color: #000000, $alpha: .6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dis-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.modal {
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.site-modal {
+  @include mobile {
+    padding: 20px;
+    padding-top: 40px;
+    width: 90%;
+  }
 }
