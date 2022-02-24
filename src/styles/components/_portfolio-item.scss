@@ -9,6 +9,7 @@
 
   &__content {
     @include flex-column-center;
+
     padding: 0 10px;
     padding-top: 16px;
     padding-bottom: 23px;
@@ -43,6 +44,10 @@
     color: var(--color-primary);
     transition: 0.3s ease-in-out;
     will-change: margin;
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
   }
 
   &:focus {
@@ -51,7 +56,6 @@
   }
 
   &:hover {
-
     .portfolio-item__btn {
       margin-bottom: 0;
     }

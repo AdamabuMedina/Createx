@@ -12,6 +12,14 @@
     @include tablet {
       --mission-gap: 30px;
     }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -48,6 +56,12 @@
     &--comfort {
       background-image: url('../img/homepage/mission/comfort.svg');
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -64,5 +78,46 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+}
+
+.know-form {
+  position: relative;
+  top: 92px;
+  border-radius: 4px;
+  padding: 48px 60px;
+  box-shadow: var(--main-shadow);
+  background-color: var(--color-light);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__field {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    padding: 11px 29px;
+  }
+
+  @include mobile {
+    top: initial;
+    padding: 10px 15px;
   }
 }

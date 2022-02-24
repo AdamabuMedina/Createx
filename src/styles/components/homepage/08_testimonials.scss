@@ -33,6 +33,10 @@
     @include tablet {
       width: 300px;
     }
+
+    @include minitablet {
+      display: none;
+    }
   }
 
   &__title {
@@ -48,6 +52,11 @@
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  @include minitablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

@@ -12,7 +12,7 @@ const heroSliders = document.querySelector(".hero-silder")
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
 
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -28,6 +28,14 @@ if (portSlider) {
     navigation: {
       nextEl: '.portfolio-section__next',
       prevEl: '.portfolio-section__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      }
     }
   });
 

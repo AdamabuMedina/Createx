@@ -31,6 +31,11 @@
       letter-spacing: 1px;
       text-transform: initial;
     }
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 54px;
+    }
   }
 
   &__descr {
@@ -39,6 +44,11 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-storm);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__bottom {
@@ -133,5 +143,15 @@
   &--contacts {
     background-image: url('../img/contacts/contacts-hero-bg.png');
     background-position: right -9px bottom;
+  }
+
+  @include tablet {
+    background-image: none;
+    min-height: auto;
+  }
+
+  @include minitablet {
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 }

@@ -216,9 +216,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpe?g|gif|mp4)$/i,
         type: 'asset/resource',
-        exclude: [
-          path.resolve(__dirname, './src/img/svg'),
-        ]
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|)$/i,

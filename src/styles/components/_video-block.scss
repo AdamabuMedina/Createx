@@ -68,4 +68,8 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @include mobile {
+    height: 300px;
+  }
 }
