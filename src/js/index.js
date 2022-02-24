@@ -12,7 +12,6 @@ import "./components/burger"
 
 // CSS
 import "../styles/main.scss"
-import "./components/svg"
 
 // vendor
 import "./vendor/vendor"
