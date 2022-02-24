@@ -3,17 +3,32 @@
   padding-bottom: 80px;
   background-color: var(--color-athens);
 
+  .grid {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__left {
     grid-column: 5 span;
   }
 
   &__image {
     margin-bottom: -142px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__right {
     grid-column: 7 span;
     padding-left: 104px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-top: 30px;
+    }
   }
 
   &__title {

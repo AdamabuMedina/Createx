@@ -16,6 +16,10 @@
   &__btn {
     width: 390px;
     transform: translateY(13px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__centered {
@@ -24,10 +28,23 @@
 
   &__list {
     --mission-gap: 94px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 27px;
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -50,6 +67,10 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include minitablet {
+          display: none;
+        }
       }
     }
 
@@ -63,6 +84,12 @@
 
     &--control {
       background-image: url('../img/services-inner/control.svg');
+    }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 

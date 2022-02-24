@@ -73,7 +73,7 @@ if (portSlider) {
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
 
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
@@ -89,6 +89,14 @@ if (relatedSlider) {
     navigation: {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      }
     }
   });
 
